@@ -1,0 +1,320 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/front_page.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Alcher</title>
+</head>
+  <body>
+    <div class="background_color">
+     <div class="one">
+       <div class="container-fluid">
+          <div class="row">
+           <div class="col-sm-4 col-xs-6 two">
+            <a href="{% url 'blog-home' %}" style="display: block;">
+             <img id="alcher_stream"alt="Brand" src="{% static 'blog\logo.svg' %}">
+          </a>
+            </div>
+            <div class="col-sm-6 col-xs-6 " >
+            <form  id="form" method="POST" >
+              {% csrf_token %}
+              <input type="text" placeholder="search movie here..." id="searchBar" class="search" name="searchstring" required>
+              <button style="display: none;">search</button>
+            </form>
+           </div>
+            <div class="col-sm-2 three">
+              <div class="dropdown" style="float:right;">
+                <div class="dropbtn"><img src="{% static 'blog\icon.PNG' %}" alt="icon" class="icon"></div>
+                <div class="dropdown-content">
+                <a href="{% url 'blog-home' %}">Home</a>
+                <a href="#">Profile</a>
+                <a href="#">About Us</a>
+                <a href="{% url 'blog-favourite' %}">Favourites</a>
+                <a href="#">Settings</a>
+                <a href="#">Contact Us</a>
+                <a href="/start_page/logout/">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="four">
+         <p id="poppins">STREAM ALL THE POPULAR<br>MOVIES ON THE GO</p>
+          
+            <div class="button">
+             <button type="button" class="btn btn-success" id="btn">GET STARTED</button>
+            </div>
+        </div>
+      </div>
+<br>
+<br>
+<div id="hits">
+  <h4>BLOCKBUSTER HITS</h4>
+ </div>
+ <div class="responsive_main">
+    <div class="responsive">
+     
+    <div class="gallery">
+        <img id="img1" src="https://cdn.cloudflare.steamstatic.com/steam/apps/997070/capsule_616x353.jpg?t=1617721712">
+      <div id="desc_1" class="desc">Avengers</div>
+      <div class = "rate">
+        <div style="font-weight: bold;" class="rating">Rating : <span id="rating1">20</span> </div>
+        <div class="heart">
+          <a style="color: rgb(245, 60, 91)" href="#" class="like_btn"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="over1" class="over" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+      
+    </div>
+
+    <div class="gallery">
+        <img id="img2"  src="https://flxt.tmsimg.com/assets/p8815512_p_v10_ap.jpg" >
+      <div id="desc_2" class="desc">Avengers</div>
+
+      <div class = "rate">
+        <div style="font-weight: bold;"class="rating">Rating : <span  id="rating2" >20</span> </div>
+        <div class="heart">
+          <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+          </a>
+        </div>
+      </div> 
+
+      <div id="over2"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+    </div>
+
+    <div class="gallery">
+        <img id="img3"  src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" >
+      <div id="desc_3" class="desc">Avengers</div>
+
+      <div class = "rate">
+        <div style="font-weight: bold;"  class="rating">Rating : <span  id="rating3" >20</span> </div>
+        <div class="heart">
+          <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+          </a>
+        </div>
+      </div> 
+
+      <div id="over3"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+    </div>
+
+    <div class="gallery">
+        <img  id="img4" src="https://i.ytimg.com/vi/QwievZ1Tx-8/maxresdefault.jpg" >
+      <div id="desc_4" class="desc">Avengers</div>
+
+      <div class = "rate">
+        <div style="font-weight: bold;"  class="rating">Rating : <span  id="rating4" >20</span> </div>
+        <div class="heart">
+          <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+          </a>
+        </div>
+      </div> 
+
+      <div id="over4"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+    </div>
+        </div>
+        <div class="responsive2">
+
+        <div class="gallery">
+            <img  id="img5" src="https://cdn.cloudflare.steamstatic.com/steam/apps/997070/capsule_616x353.jpg?t=1617721712">
+          <div id="desc_5" class="desc">Avengers</div>
+
+          <div class = "rate">
+            <div style="font-weight: bold;"  class="rating">Rating : <span  id="rating5" >20</span> </div>
+            <div class="heart">
+              <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+              </a>
+            </div>
+          </div> 
+
+          <div id="over5"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+        </div>
+
+        <div class="gallery">
+            <img  id="img6" src="https://flxt.tmsimg.com/assets/p8815512_p_v10_ap.jpg" >
+          <div id="desc_6" class="desc">Avengers</div>
+
+          <div class = "rate">
+            <div style="font-weight: bold;" class="rating">Rating : <span  id="rating6" >20</span> </div>
+            <div class="heart">
+              <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+              </a>
+            </div>
+          </div> 
+
+          <div id="over6"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+        </div>
+
+        <div class="gallery">
+            <img  id="img7" src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" >
+          <div id="desc_7" class="desc">Avengers</div>
+
+          <div class = "rate">
+            <div style="font-weight: bold;" class="rating">Rating : <span  id="rating7" >20</span> </div>
+            <div class="heart">
+              <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+              </a>
+            </div>
+          </div> 
+
+          <div id="over7"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+        </div>
+
+           <div class="gallery">
+            <img  id="img8" src="https://i.ytimg.com/vi/QwievZ1Tx-8/maxresdefault.jpg" >
+            <div id="desc_8" class="desc">Avengers</div>
+
+            <div class = "rate">
+              <div style="font-weight: bold;"  class="rating">Rating : <span  id="rating8" >20</span> </div>
+              <div class="heart">
+                <a style="color: rgb(245, 60, 91)" href="#" class="like_btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" id="imgClickAndChange" onclick="myFunction()">
+                   <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                </a>
+              </div>
+            </div> 
+
+               <div id="over8"class="over">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nobis voluptate labore accusamus quos. Impedit ratione cum est alias facilis libero deleniti, quas aut eligendi assumenda labore esse, quasi sed!</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="footer">
+            <div class="fa">
+           <icon style="font-size:25px">&#xf09a;</icon>
+          <icon style="font-size:25px">&#xf099;</icon>
+          <icon style="font-size:25px">&#xf16a;</icon>
+        </div>
+
+  <div class="row1">
+      <div class="col-md-12 copy">
+          <p class="text-center">&copy; 2021 Alcher Stream</p>
+      </div>
+  </div>
+          </div>
+          <script>
+            function Stringcut(str, num, str2) {
+            if (str.length <= 65) {
+              return str
+            }
+            else if(str.length >= num && str2.length < 30)
+                return str.slice(0, 65) + '...'
+            else if(str.length >= num && str2.length >= 30 && str2.length <= 64)
+                return str.slice(0, 30) + '...';
+            else if(str.length >= num && str2.length >= 65)
+            return str.slice(0, 10) + '...';
+
+          }
+          
+var count = 1;
+var like = document.getElementsByClassName("like_btn")
+          </script>
+
+
+          {% for movie in data %}
+          <script>
+            // if ("https://www.themoviedb.org/t/p/w500"+"{{movie.poster_path}}" != "https://www.themoviedb.org/t/p/w500null")
+              document.getElementById('desc_'+count).innerHTML = "{{movie.original_title}}"
+              document.getElementById('rating'+count).innerHTML = "{{movie.vote_average}}"
+              document.getElementById('over'+count).innerHTML = Stringcut("{{movie.overview}}", 78,"{{movie.original_title}}")
+              document.getElementById('img'+count).src = "https://www.themoviedb.org/t/p/w500"+"{{movie.poster_path}}"
+              like[count-1].href="{% url 'blog-fav' movie.id %}"
+              count++
+
+
+          </script>
+        {% endfor %}  
+    
+      <!-- <script>
+        var c =1;
+        </script>
+        <script>
+
+        document.getElementsByClassName("like_btn").addEventListener("click",myFunction)
+        function myFunction() {
+           var element = document.getElementById("imgClickAndChange");
+           if(c == 0){
+           element.classList.add("bi bi-heart-fill");
+           element.classList.remove("bi bi-heart");
+           c =1;
+           }
+           else
+           {element.classList.add("bi bi-heart");
+           element.classList.remove("bi bi-heart-fill");
+           c=0;
+           }
+        }
+        </script> -->
+
+        <script>
+          var form_var=document.getElementById("form")
+          form_var.addEventListener("submit",e =>
+          {
+                e.preventDefault()
+                alert('hi')
+                $.ajax({
+            type: "post",
+            url: "{% url 'blog-home' %} ",
+            data: form_var.serialize() ,
+            done:  function(data){
+              alert("not nice")
+              $(".responsive_main").html(data)
+            }
+           });
+          })
+         
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+   
+</html>

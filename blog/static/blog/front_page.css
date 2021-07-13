@@ -1,0 +1,435 @@
+.background_color{
+    background-color: #E6E1E1;
+  }
+  .one{
+    background-image: url('bg.png');
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 0px;
+  }
+  
+  input{
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid white;
+    width: 500px;
+    color:white;
+  }
+  
+  .icon{
+    border-radius:50% ;
+  }
+
+  .dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+    right: 0;
+    background-color: black;
+    min-width: 250px;
+    box-shadow: 0px 8px 6px 2px rgba(249, 255, 253, 0.788);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-style: ridge;
+  }
+  
+  .dropdown-content a:hover {background-color: #353232;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+  .two{
+    display: block;
+    padding-top: 30px;
+    padding-left: 80px;
+  }
+  .col-sm-6{
+    display: block;
+    padding-top: 30px;
+  }
+  .three{
+    display: block;
+    padding-top: 15px;
+    padding-left: 130px;
+  }
+  
+  #poppins{
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 4.5vw;
+      -webkit-text-stroke: 0.05em whitesmoke;
+      -webkit-text-fill-color: transparent;
+      padding-top: 7%;
+      
+  }
+  .btn-success{
+    
+    cursor: pointer;
+    width: 20%;
+    padding: 1%;
+    border-radius: 8px;
+    background: #FF00AA;
+    border: 0;
+  }
+  .button{
+    display: block;
+    padding-bottom: 8%;
+    padding-top: 5%;
+  }
+  #btn{
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    position: relative;
+    left: 40%;
+  }
+  .btn-success:hover{
+      background: #FF00AA;
+  }
+  .btn-success:not(:hover) .hide {
+      display: none;
+  }
+  
+  div.gallery {
+    border: 1px solid #ccc;
+    display: inline-block;
+    width:22%;
+    margin: 1%;
+  }
+  
+  div.gallery:hover {
+    border: 1.5px rgb(48, 46, 46);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 350px;
+    border-radius: 0px;
+    
+  }
+  
+  div.desc {
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 20px;
+   font-family: 'Castoro', serif;
+   font-weight: bold;
+   text-shadow: 2px 2px 2px #ababab;
+    color: black;
+    word-wrap: break-word;
+  }
+  .over{
+    text-align: center;
+   font-family: 'Castoro', serif;
+  
+   word-wrap: break-word;
+  }
+  .rating{
+    margin-left: -20%;
+  }
+  .rate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 3%;
+  }
+  .heart{
+    margin-right: -17%;
+  }
+  .responsive{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+  }
+  #hits{
+    padding-bottom: 0%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 0%;
+  }
+  #hits2{
+    padding-bottom: 0%;
+    padding-left: 5%;
+    padding-right: 0%;
+    padding-top: 4%;
+  }
+  .responsive2{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+  }
+  .fa{
+    color: white;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .material-icons{
+    display: block;
+  }
+  .copyright{
+    color: white;
+    font-size: 25px;
+  
+  }
+icon{
+
+  padding: 7% 6% 10% 6% ;
+}
+  h4{
+    font-weight: 700;
+    color: black;
+  }
+  .row1{
+    color:white;
+    font-size: 25px;
+    padding-top: 0%;
+    font-weight: 600;
+  }
+  .footer {
+    background-color: #3B3737;
+    padding:0 10% 1% 10%;
+  }
+  
+  
+  
+  
+  /*media queries*/
+  
+  @media screen and (max-width: 950px) {
+    .icon{
+      border-radius:50% ;
+    }
+    .two{
+      display: block;
+      padding-top: 30px;
+      padding-left: 4%;
+    }
+    .col-sm-6{
+      display: block;
+      padding-top: 30px;
+      padding-left: 5%;
+    }
+    .three{
+     display: none;
+    }
+    div.gallery {
+      border: 1px solid #ccc;
+      display: inline-block;
+      width:40%;
+      margin: 1%;
+    }
+    .responsive{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    .responsive2{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    #hits{
+    display: inline-block;
+    padding-left: 10%;
+    }
+    #hits2{
+      display: inline-block;
+      padding-left: 10%;
+      }
+    }
+  
+  
+  @media screen and (max-width: 800px) {
+    .btn-success{
+    
+      cursor: pointer;
+      width: 25%;
+      padding: 1%;
+      border-radius: 8px;
+      background: #FF00AA;
+      border: 0;
+    }
+    .button{
+      display: block;
+      padding-bottom: 8%;
+      padding-top: 5%;
+    }
+    #btn{
+      font-size: 2vw;
+      letter-spacing: 1px;
+      position: relative;
+      left:35%;
+    }
+    #poppins{
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 5vw;
+      -webkit-text-stroke: 0.05em whitesmoke;
+      -webkit-text-fill-color: transparent;
+      padding-top: 8%;
+      
+  }
+  
+  
+  }
+  @media screen and (max-width: 750px) {
+    .two{
+      display: block;
+      padding-top: 30px;
+      padding-left: 2%;
+    }
+    div.gallery {
+      border: 1px solid #ccc;
+      display: inline-block;
+      width:40%;
+      margin: 1.5%;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .btn-success{
+    
+      cursor: pointer;
+      width: 30%;
+      padding: 1%;
+      border-radius: 8px;
+      background: #FF00AA;
+      border: 0;
+    }
+    .button{
+      display: block;
+      padding-bottom: 8%;
+      padding-top: 5%;
+    }
+    #btn{
+      font-size: 2.5vw;
+      letter-spacing: 1px;
+      position: relative;
+      left:30%;
+    }
+    #poppins{
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 6vw;
+      -webkit-text-stroke: 0.05em whitesmoke;
+      -webkit-text-fill-color: transparent;
+      padding-top: 8%;
+      
+  }
+  
+  div.gallery {
+    border: 1px solid #ccc;
+    display: inline-block;
+    width:40%;
+    margin: 2%;
+  }
+  input{
+    background: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid white;
+    width: 300px;
+    color:white;
+  
+  }
+  #form{
+    padding-left: 50px;;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  }
+  @media screen and (max-width: 600px) {
+  
+    #form{
+     display: none;
+    }
+    #hits{
+      display: inline-block;
+      padding-left: 5%;
+      }
+      #hits2{
+        display: inline-block;
+        padding-left: 5%;
+        }
+   
+  }
+  @media screen and (max-width: 600px) {
+    .responsive{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    .responsive2{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    div.gallery {
+      border: 1px solid #ccc;
+      display: inline-block;
+      width:70%;
+      margin-top: 2%;
+      
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    #hits{
+      display: inline-block;
+      padding-left: 15%;
+      }
+      #hits2{
+        display: inline-block;
+        padding-left: 15%;
+        }
+  }
