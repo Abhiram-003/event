@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-2+k(j#9omze73n=b1k!%18@h)o3)$!6fu*il=!2o%0+le3l309
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'myalcherproject.herokuapp.com'
+    'myalcherproject.herokuapp.com',
+
 ]
 
 
